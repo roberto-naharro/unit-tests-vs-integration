@@ -1,0 +1,33 @@
+{
+  "name": "integration-tests",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "Roberto Naharro",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@types/plist": "^3.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.6.2",
+    "prettier": "^3.0.1",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:debug": "yarn node --inspect-brk node_modules/jest/bin/jest --runInBand --coverage false --no-cache --testTimeout 150000",
+    "test:integration": "jest --config=jest.integration.config.js --testTimeout 150000",
+    "test:integration:debug": "yarn node --inspect-brk node_modules/jest/bin/jest --runInBand --coverage false --no-cache --testTimeout 150000 --config=jest.integration.config.js",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"**/*.ts\"",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "plist": "^3.1.0"
+  }
+}

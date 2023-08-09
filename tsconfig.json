@@ -1,0 +1,34 @@
+{
+  "extends": "./tsconfig.base.json",
+  "ts-node": {
+      "transpileOnly": true,
+      "files": true,
+      "compilerOptions": {
+        "module": "commonjs"
+      },
+    },
+    "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "typeRoots": ["./node_modules/@types", "./types/modules"]
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "**/*.spec.tsx",
+    "**/*.spec.ts",
+    "**/*.test.tsx",
+    "**/*.test.ts",
+    "**/*.mock.tsx",
+    "**/__integration__/**/*",
+    "**/__tests__/**/*",
+    "**/__mocks__/**/*"
+  ]
+}
